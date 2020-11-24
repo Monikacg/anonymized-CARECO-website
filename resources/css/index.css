@@ -1,0 +1,847 @@
+html {
+  font-family: 'proxima_novaregular';
+  font-size: 16px;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+/* body */
+
+body {
+  margin: 0;
+  background-color: rgba(122,153,172,1);
+  color: rgba(256,256,256,1);
+}
+
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 3.5rem;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+}
+
+nav ul li a {
+  align-self: center;
+  font-size: 1.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgba(87,89,88,1);
+  padding: 1rem 1rem;
+  /*height: inherit;*/
+}
+
+nav ul li a:hover {
+  color: rgba(237,139,0,1);
+}
+
+nav a img {
+  padding: 0.75rem 0;
+}
+
+#tjenester:hover {
+  background-color: rgba(178,180,178,1);
+}
+
+#tjenester:hover a {
+  color: rgba(237,139,0,1);
+}
+
+ul li ul {
+  background: inherit;
+  visibility: hidden;
+  opacity: 0;
+  width: 12rem;
+  position: absolute;
+  transition: all 0.1s ease;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  background-color: inherit;
+  text-transform: uppercase;
+  margin: 1rem;
+  clear: both;
+  width: calc(100% - 2rem);
+}
+
+#testing {
+  top: 3.5rem;
+  right: 42rem;
+}
+
+#bedrifter {
+  top: 3.5rem;
+  right: 30rem;
+}
+
+#privatpersoner {
+  top: 3.5rem;
+  right: 18rem;
+}
+
+#consulting {
+  width: 15rem;
+  left: 0;
+  top: 9.75rem;
+}
+
+.navlogo {
+  height: 2rem;
+  padding: 2.5px 0;
+  padding-left: 1rem;
+}
+
+.desktop ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: inherit;
+}
+
+.desktop li {
+  display: inline-flex;
+}
+
+.mobile {
+  display: none;
+}
+
+.nav-container {
+  display: none;
+}
+
+.nav-button img {
+  height: 1rem;
+  width: 1.3rem;
+}
+
+/* banner */
+
+.banner {
+  background-color: white;
+  padding-top: 3.5rem;
+}
+
+.banner img {
+  max-width: 100%;
+}
+
+.forside {
+  display: grid;
+  grid-template-columns: 3fr 14fr 3fr;
+  grid-template-rows: 14fr 7.5fr 2.5fr 1fr;
+  width: 100%;
+  height: 44.1vw;
+}
+
+.forside::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 44.2vw;
+  background-image: linear-gradient(to top, rgba(91,127,149,1), transparent, rgba(256,256,256,1));
+}
+
+.forside .item-1 {
+  grid-row: 1 / 3;
+  grid-column: 1 / 4;
+}
+
+.forside .item-2 {
+  grid-row: 2 / 4;
+  grid-column: 2 / 3;
+  z-index: 3;
+}
+
+.underside::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 26.8vw;
+  background-image: linear-gradient(to top, rgba(91,127,149,1), transparent, rgba(256,256,256,1));
+  z-index: 3;
+}
+
+.underside, .underside img {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#carecologo {
+  position: absolute;
+  top: 9vw;
+  left: 10vw;
+  width: 80vw;
+  z-index: 5;
+}
+
+/* main content */
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  color: rgba(87,89,88,1);
+}
+
+#beskriv {
+  display: flex;
+  align-items: center;
+}
+
+/* forsideinfo */
+
+.forsideinfo {
+  display: flex;
+  align-self: center;
+  padding: 2rem;
+  max-width: 75rem;
+}
+
+.carecoinfo {
+  display: flex;
+  align-self: center;
+}
+
+.carecoinfo p {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.logoinfo {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.logoinfo img {
+  width: calc(273px - 15vw);
+}
+
+/* slagord */
+
+.slagord {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0 0 1rem 0;
+}
+
+.slagord::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 22.1vw;
+  background-image: linear-gradient(to top, rgba(112,115,114,1), transparent, transparent);
+}
+
+.slagord h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.slagord p {
+  margin-block-start: 1rem;
+}
+
+.slagordboks {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.slagordboks a {
+  color: inherit;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.slagordboks a h1:hover {
+  color: rgba(237,139,0,1);
+}
+
+.gradient-overlay img {
+  max-width:100%;
+}
+
+#midlertidig {
+  text-align: center;
+  padding-bottom: 7rem;
+}
+
+/* CV */
+
+.CVskjema {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0 0 1rem 0;
+}
+
+.form {
+  align-self: center;
+  color: rgba(87,89,88,1);
+  background-color: white;
+  margin-bottom: 1rem;
+  width: 90vw;
+}
+
+.text-danger {
+  color: rgba(200, 0, 0, 1);
+  font-family: 'proxima_nova_altbold';
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+.form form input {
+  outline: none;
+  border: 1px solid black;
+  height: 2rem;
+  font: inherit;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.form form textarea {
+  outline: none;
+  border: 1px solid black;
+  font: inherit;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.form form input:focus, .form form textarea:focus {
+  border: 1px solid rgba(237,139,0,1);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(237,139,0,0.6);
+}
+
+.form p {
+  margin: 0;
+}
+
+#cv, #cover {
+  width: 10.5rem;
+  height: auto;
+  border: none;
+  padding: 0.5rem 0;
+}
+
+#send {
+  align-self: flex-end;
+  width: auto;
+}
+
+#send:hover {
+  background-color: rgba(237,139,0,1);
+  color: white;
+}
+
+.navn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.for {
+  grid-column: 1;
+}
+
+.etter {
+  grid-column: 2;
+}
+
+.for, .etter {
+  display: flex;
+  flex-direction: column;
+  width: 100%
+}
+
+label {
+  padding-top: 1rem;
+}
+
+/* stillinger */
+
+.stillingsliste {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+.overskrift {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3.5rem;
+}
+
+ .stillingsboks {
+   display: grid;
+   grid-template-columns: 10rem 7fr 3fr;
+   column-gap: 1rem;
+   padding: 1rem;
+   align-items: center;
+   background-color: rgba(214,210,196,0.5);
+   border: 0.05rem solid rgba(214,210,196,0);
+   border-radius: 1.5rem;
+   margin: 1rem 2rem;
+   margin-top: 0;
+   height: 6rem;
+   max-width: 100%;
+   text-decoration: none;
+   color: inherit;
+ }
+
+.stillingsboks h1 {
+  font-size: 2rem;
+}
+
+.stillingsboks p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+ .stillingsboks img {
+   width: 90%;
+ }
+
+ .stillingsboks:hover {
+   font-size: 1.1rem;
+   border: 0.05rem solid rgba(237,139,0,1);
+   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(237,139,0,0.6);
+ }
+
+.stillingsboks:hover img {
+  width: 100%;
+}
+
+/* Stillingsbeskrivelse */
+
+.sokesider {
+  margin: 2rem;
+  margin-top: 0;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.sokesider p {
+  margin: 1rem 0;
+}
+
+.sokesider ul {
+  width: auto;
+  margin: 1rem 0;
+}
+
+.nokkelboks {
+  display: flex;
+  flex-direction: column;
+}
+
+.nokkelboks h3 {
+  margin: 0;
+}
+
+.nokkelboks h2 {
+  margin-bottom: 0;
+}
+
+#sok-button {
+  text-align: center;
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  width: 12rem;
+  color: white;
+  background-color: rgba(237,139,0,1);
+  border-radius: 1.5rem;
+}
+
+#sok-button:hover{
+  background-color: rgba(237,139,0,0.6);
+}
+
+.nokkelinfo {
+  font-family: 'proxima_nova_altthin';
+  width: 90%;
+  max-width: 500px;
+  padding: 1.5rem;
+  color: white;
+  background-color: rgba(91,127,149,1);
+  border: 1px solid rgba(91,127,149,1);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.sok {
+  margin-top: 3.5rem;
+}
+
+/* Kontakt */
+
+.sider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0 0 1rem 0;
+}
+
+.form #send {
+  margin-top: 1rem;
+}
+
+/* kandidater */
+
+.next_and_prev_page {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  margin-bottom: 0;
+}
+
+.next_and_prev_page a {
+  color: inherit;
+  text-decoration: none;
+  border: solid 1px black;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.next_and_prev_page a:hover {
+  color: white;
+  background-color: rgba(237,139,0,1);
+}
+
+#thispage {
+  color: white;
+  border-color: white;
+}
+
+#thispage:hover {
+  color: white;
+  border-color: white;
+  background-color: white;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer h1 {
+  font-size: 1.5rem;
+}
+
+footer .footerboks {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 2rem;
+}
+
+footer .footerboks a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer .footerboks a:hover{
+  color: rgba(237,139,0,1);
+}
+
+footer #icons, footer #kontakt {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer span a {
+  font-size: 2rem;
+  color: inherit;
+}
+
+footer span {
+  padding: 0;
+}
+
+footer i {
+  padding: 2rem 1.5rem 0 0;
+}
+
+footer i:hover {
+  color: rgba(237,139,0,1);
+}
+
+@media only screen and (max-width: 750px) {
+
+  /* header */
+
+  nav a {
+    margin: 0;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+    height: inherit;
+  }
+
+  .nav-dropdownmeny {
+    align-self: center;
+  }
+
+  .nav-button {
+    text-align: right;
+
+    padding: 0 1rem;
+  }
+
+  .nav-button i {
+    align-self: center;
+  }
+
+  .nav-container {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    top: -100%;
+    left: 0;
+    padding: 0;
+    padding-bottom: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgba(256, 256, 256, 1);
+    opacity: 0;
+  }
+
+  .nav-container ul {
+    margin: 0;
+    padding: 0.25rem 1rem;
+    text-align: left;
+  }
+
+  .nav-container li {
+    margin: 0;
+    padding: 0;
+    display: inherit;
+  }
+
+  .nav-container ul li a {
+
+  }
+
+  .nav-container .navlogo {
+    padding-top: 0.6rem;
+  }
+
+  .nav-dropdownmeny:hover .nav-container{
+    top: 0;
+    opacity: 1;
+  }
+
+  /* banner */
+
+  .banner {
+    display: none;
+  }
+
+  /* main-content*/
+
+  .main-content {
+    padding-top: 3.5rem;
+  }
+
+  .overskrift {
+    margin-top: 0;
+  }
+
+  /* forsideinfo */
+  .forsideinfo {
+    margin: 1rem 10vw;
+    padding: 0;
+  }
+
+  .carecoinfo {
+    background-image: url(../images/Careco_symbol_orange_opaque.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .logoinfo img {
+    display: none;
+  }
+
+  /* sider */
+
+  .slagord {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .slagord::before {
+    display: none;
+  }
+
+  .slagordboks {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 10vw;
+  }
+
+  .gradient-overlay::before {
+    content: "";
+    position: absolute;
+    width: 77.8vw;
+    height: 51.9vw;
+    background-image: linear-gradient(to top, rgba(112,115,114,1), transparent, transparent);
+  }
+
+  .slagordboks h1 {
+    grid-column: 2;
+    grid-row: 1;
+    padding-top: 0.5rem;
+  }
+
+  .slagordboks p {
+    grid-column: 2;
+    grid-row: 2;
+    font-weight: lighter;
+  }
+
+  i {
+    padding: 0 1.45vw;
+  }
+
+  /* CV */
+
+  .form {
+    margin-top: -1.5rem;
+    width: 80vw;
+  }
+
+  #cv, #cover {
+    width: auto;
+  }
+
+  .navn {
+    display: block;
+  }
+
+  /* Stillinger */
+
+  .stillingsboks {
+    grid-template-columns: 10vw 4fr 1fr;
+    column-gap: 0.5rem;
+    padding: 0.5rem;
+    align-items: center;
+    border-radius: 0.5rem;
+    margin: 0.5rem 1rem;
+    margin-top: 0;
+    height: 10vw;
+  }
+
+ .stillingsboks img {
+   width: 100%
+ }
+
+  /* footer */
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  footer .footerboks {
+    width: 75vw;
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+  }
+
+  #icons {
+    justify-content: flex-end;
+    padding: 0;
+  }
+}
+
+/* ***** */
+
+@media only screen and (max-width: 660px) {
+  .gradient-overlay::before {
+    content: "";
+    position: absolute;
+    width: 77.4vw;
+    height: 51.6vw;
+    background-image: linear-gradient(to top, rgba(112,115,114,1), transparent, transparent);
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .gradient-overlay::before {
+    content: "";
+    position: absolute;
+    width: 77.2vw;
+    height: 51.4vw;
+    background-image: linear-gradient(to top, rgba(112,115,114,1), transparent, transparent);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .gradient-overlay::before {
+    content: "";
+    position: absolute;
+    width: 76.8vw;
+    height: 51.3vw;
+    background-image: linear-gradient(to top, rgba(112,115,114,1), transparent, transparent);
+  }
+}
+
+@media only screen and (min-width: 1050px){
+  .logoinfo img {
+    width: 7rem;
+  }
+}
